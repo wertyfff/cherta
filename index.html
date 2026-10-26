@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЧЕРТА. — Ремонт, в котором всё под контролем</title>
+<meta name="description" content="ЧЕРТА. — ремонт и отделка квартир под ключ. От первой сметы до финальной приёмки: этапы, договорённости и цифровой паспорт ремонта.">
+<meta name="theme-color" content="#151513">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ЧЕРТА. — Ремонт, в котором всё под контролем">
+<meta property="og:description" content="Ремонт и отделка квартир под ключ: смета, этапы и цифровой паспорт ремонта. Концепт-проект.">
+<meta property="og:image" content="https://wertyfff.github.io/cherta/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141413'/%3E%3Crect x='4' y='15' width='16' height='2' fill='%23F2F0EA'/%3E%3Crect x='22' y='13' width='6' height='6' fill='%23F2F0EA'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=Roboto+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=10">
+<script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+</head>
+<body class="is-loading">
+
+<a class="skip" href="#main">К содержанию</a>
+
+<!-- ПРЕЛОАДЕР -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__word"><span>Ч</span><span>Е</span><span>Р</span><span>Т</span><span>А</span><span>.</span></div>
+  <div class="loader__num mono"><span id="loaderNum">0</span>%</div>
+</div>
+
+<!-- КУРСОР -->
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label mono" id="cursorLabel"></span></div>
+
+<!-- ============ 01. ШАПКА ============ -->
+<header class="header" id="header">
+  <a class="logo" href="#top" aria-label="ЧЕРТА. — на главную">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="15" width="21" height="2"/><rect x="25" y="13" width="6" height="6"/></svg>
+    <span class="logo__word">ЧЕРТА.</span>
+  </a>
+  <nav class="nav mono" aria-label="Основная навигация">
+    <a href="#approach">Подход</a>
+    <a href="#services">Услуги</a>
+    <a href="#projects">Проекты</a>
+    <a href="#process">Процесс</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <a class="header__cta mono" href="#contacts">Обсудить проект</a>
+  <button class="burger mono" id="burger" aria-expanded="false" aria-controls="menu">
+    <span class="burger__icon" aria-hidden="true"><i></i><i></i></span><span class="burger__text">Меню</span>
+  </button>
+</header>
+
+<!-- МЕНЮ -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__grid">
+    <nav class="menu__nav" aria-label="Меню">
+      <a href="#approach"><span>Подход</span></a>
+      <a href="#services"><span>Услуги</span></a>
+      <a href="#projects"><span>Проекты</span></a>
+      <a href="#passport"><span>Паспорт</span></a>
+      <a href="#process"><span>Процесс</span></a>
+      <a href="#contacts"><span>Контакты</span></a>
+    </nav>
+    <div class="menu__info">
+      <div><p class="mono dim">Телефон</p><a class="t" href="tel:+79000000000">+7 900 000-00-00</a></div>
+      <div><p class="mono dim">Почта</p><a class="t" href="mailto:hello@cherta.example">hello@cherta.example</a></div>
+      <div><p class="mono dim">Часы</p><p class="t">Ежедневно, 9:00–21:00</p></div>
+      <div><p class="mono dim">Соцсети</p><p class="t">Telegram · WhatsApp · VK</p></div>
+    </div>
+  </div>
+  <p class="menu__foot mono dim">Ремонт, в котором всё под контролем ■</p>
+</div>
+
+<main id="main">
+
+<!-- ============ 02. HERO ============ -->
+<section class="hero dark" id="top">
+  <div class="hero__media">
+    <img src="https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=2400&q=80" alt="Спальня с тёмной стеной, деревянным полом и большим окном" fetchpriority="high">
+  </div>
+  <div class="hero__shade"></div>
+
+  <div class="grid hero__grid">
+    <p class="hero__place t" data-fade>Ремонт и&nbsp;отделка квартир<br>Москва и&nbsp;область</p>
+
+    <h1 class="hero__title h-xl" data-split>Ремонт, в&nbsp;котором всё&nbsp;под контролем.</h1>
+
+    <div class="hero__principle mono" data-fade>
+      <span class="hero__pline"></span>
+      <span id="principleNum">01 / 04</span>
+      <span class="hero__pword" id="principleWord">Определённость</span>
+    </div>
+
+    <div class="hero__lead" data-fade>
+      <p class="t stair"><span>От первой сметы до&nbsp;финальной приёмки.</span><span>Продумываем этапы, фиксируем договорённости и&nbsp;показываем, что происходит на&nbsp;каждом шаге.</span></p>
+    </div>
+
+    <ul class="hero__tags t sq-list" data-fade>
+      <li>Квартиры в&nbsp;новостройках</li>
+      <li>Вторичное жильё</li>
+      <li>Ремонт под ключ</li>
+    </ul>
+
+    <div class="hero__actions" data-fade>
+      <a class="btn mono" href="#contacts" data-magnetic>Обсудить свой проект <i class="sq"></i></a>
+      <a class="link mono" href="#approach">Посмотреть наш подход ↓</a>
+    </div>
+
+    <a class="hero__card" href="#passport" data-fade data-cursor="Паспорт" aria-label="Паспорт ремонта — демонстрационный объект № 024">
+      <div class="hero__card-img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=75" alt="Гостиная с панелями из дуба"></div>
+    </a>
+  </div>
+</section>
+
+<!-- БЕГУЩАЯ СТРОКА -->
+<div class="marquee light" aria-hidden="true">
+  <div class="marquee__track" id="marquee">
+    <span>Определённость <i class="sq"></i> Прозрачность <i class="sq"></i> Контроль <i class="sq"></i> Завершённость <i class="sq"></i>&nbsp;</span>
+    <span>Определённость <i class="sq"></i> Прозрачность <i class="sq"></i> Контроль <i class="sq"></i> Завершённость <i class="sq"></i>&nbsp;</span>
+  </div>
+</div>
+
+<!-- ============ 03. ПОДХОД ============ -->
+<section class="approach dark sec" id="approach">
+  <div class="grid">
+    <div class="approach__mark">
+      <svg class="mark mark--big" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="15" width="21" height="2"/><rect x="25" y="13" width="6" height="6"/></svg>
+    </div>
+    <p class="label mono c1"><i class="sq"></i>Подход</p>
+    <p class="manifesto h-xl" id="manifesto">Мы не&nbsp;начинаем работы, пока не&nbsp;понятно, что, когда и&nbsp;за&nbsp;сколько будет сделано.</p>
+  </div>
+
+  <div class="rule" data-rule></div>
+
+  <div class="grid approach__about">
+    <p class="mono c1">Философия</p>
+    <div class="approach__text">
+      <p class="t stair"><span>Ремонт — это не&nbsp;только интерьер в&nbsp;финале. Это несколько месяцев, в&nbsp;которые</span><span>легко потерять деньги, сроки и&nbsp;спокойствие. Мы&nbsp;строим работу так, чтобы неопределённость заканчивалась до&nbsp;начала работ, а&nbsp;каждый следующий шаг был виден заранее.</span></p>
+    </div>
+    <figure class="approach__img media" data-cursor="Этап 0">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="Работа с архитектурным чертежом" loading="lazy">
+    </figure>
+  </div>
+
+  <ol class="principles">
+    <li class="pr">
+      <div class="rule" data-rule></div>
+      <div class="grid pr__row">
+        <span class="mono c1">01</span>
+        <p class="t pr__text">Состав работ, смета, этапы и&nbsp;сроки согласованы до&nbsp;того, как на&nbsp;объект приходит первый мастер.</p>
+        <h3 class="h-l pr__title">Определённость</h3>
+        <svg class="pr__svg" viewBox="0 0 120 40" aria-hidden="true"><path d="M4 20H116M4 10V30M116 10V30"/></svg>
+      </div>
+    </li>
+    <li class="pr">
+      <div class="rule" data-rule></div>
+      <div class="grid pr__row">
+        <span class="mono c1">02</span>
+        <p class="t pr__text">Вы видите, что уже сделано, что происходит сейчас и&nbsp;что будет дальше — в&nbsp;одном месте, без пересылки сообщений.</p>
+        <h3 class="h-l pr__title">Прозрачность</h3>
+        <svg class="pr__svg" viewBox="0 0 120 40" aria-hidden="true"><rect x="4" y="8" width="44" height="26"/><rect x="38" y="4" width="44" height="26"/><rect x="72" y="10" width="44" height="26"/></svg>
+      </div>
+    </li>
+    <li class="pr">
+      <div class="rule" data-rule></div>
+      <div class="grid pr__row">
+        <span class="mono c1">03</span>
+        <p class="t pr__text">Изменения, дополнительные работы и&nbsp;расходы обсуждаются заранее и&nbsp;фиксируются письменно. Без сюрпризов в&nbsp;конце месяца.</p>
+        <h3 class="h-l pr__title">Контроль</h3>
+        <svg class="pr__svg" viewBox="0 0 120 40" aria-hidden="true"><path d="M4 20H116M24 14V26M60 8V32M96 14V26"/></svg>
+      </div>
+    </li>
+    <li class="pr">
+      <div class="rule" data-rule></div>
+      <div class="grid pr__row">
+        <span class="mono c1">04</span>
+        <p class="t pr__text">Каждый этап проверяется, а&nbsp;объект принимается по&nbsp;согласованному перечню работ — пункт за&nbsp;пунктом.</p>
+        <h3 class="h-l pr__title">Завершённость</h3>
+        <svg class="pr__svg" viewBox="0 0 120 40" aria-hidden="true"><path d="M4 20H100"/><rect class="fill" x="106" y="14" width="12" height="12"/></svg>
+      </div>
+      <div class="rule" data-rule></div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 04. УСЛУГИ ============ -->
+<section class="services light sec" id="services">
+  <div class="grid shead">
+    <p class="label mono c1"><i class="sq"></i>Услуги</p>
+    <h2 class="h-xl shead__title" data-split>Берём квартиру целиком или&nbsp;отдельные помещения.</h2>
+  </div>
+
+  <ul class="svc-list" id="svcList">
+    <li class="svc" data-img="1628744876497-eb30460be9f6">
+      <div class="rule" data-rule></div>
+      <div class="grid svc__row">
+        <span class="mono c1">01</span>
+        <p class="t svc__text">От бетона до&nbsp;квартиры, в&nbsp;которую можно въезжать: перепланировка, инженерия, отделка, комплектация.</p>
+        <h3 class="h-l svc__name">Новостройки</h3>
+        <span class="mono svc__tag">Под ключ <i class="sq"></i></span>
+      </div>
+      <img class="svc__thumb" src="https://images.unsplash.com/photo-1628744876497-eb30460be9f6?auto=format&fit=crop&w=900&q=70" alt="Гостиная в новостройке" loading="lazy">
+    </li>
+    <li class="svc" data-img="1600210492493-0946911123ea">
+      <div class="rule" data-rule></div>
+      <div class="grid svc__row">
+        <span class="mono c1">02</span>
+        <p class="t svc__text">Демонтаж до&nbsp;основания, новая проводка и&nbsp;трубы, выравнивание геометрии. Скрытые работы — на&nbsp;фото.</p>
+        <h3 class="h-l svc__name">Вторичное жильё</h3>
+        <span class="mono svc__tag">Капитальный <i class="sq"></i></span>
+      </div>
+      <img class="svc__thumb" src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=70" alt="Гостиная после капитального ремонта" loading="lazy">
+    </li>
+    <li class="svc" data-img="1600566752229-250ed79470f8">
+      <div class="rule" data-rule></div>
+      <div class="grid svc__row">
+        <span class="mono c1">03</span>
+        <p class="t svc__text">Выводы воды и&nbsp;электрики под конкретный гарнитур, ровные стены под фасады, точные примыкания.</p>
+        <h3 class="h-l svc__name">Кухни</h3>
+        <span class="mono svc__tag">Помещение <i class="sq"></i></span>
+      </div>
+      <img class="svc__thumb" src="https://images.unsplash.com/photo-1600566752229-250ed79470f8?auto=format&fit=crop&w=900&q=70" alt="Светлая кухня с каменным фартуком" loading="lazy">
+    </li>
+    <li class="svc" data-img="1604709177225-055f99402ea3">
+      <div class="rule" data-rule></div>
+      <div class="grid svc__row">
+        <span class="mono c1">04</span>
+        <p class="t svc__text">Гидроизоляция с&nbsp;фотоотчётом, инсталляции, раскладка плитки по&nbsp;швам, микроцемент, скрытые люки.</p>
+        <h3 class="h-l svc__name">Санузлы</h3>
+        <span class="mono svc__tag">Помещение <i class="sq"></i></span>
+      </div>
+      <img class="svc__thumb" src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?auto=format&fit=crop&w=900&q=70" alt="Санузел в серых тонах" loading="lazy">
+    </li>
+    <li class="svc" data-img="1595428774223-ef52624120d2">
+      <div class="rule" data-rule></div>
+      <div class="grid svc__row">
+        <span class="mono c1">05</span>
+        <p class="t svc__text">Скрытые двери, встроенные шкафы в&nbsp;нишах, подсветка. Всё, что требует точной подготовки под мебель.</p>
+        <h3 class="h-l svc__name">Хранение</h3>
+        <span class="mono svc__tag">Помещение <i class="sq"></i></span>
+      </div>
+      <img class="svc__thumb" src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=900&q=70" alt="Встроенные полки в нише" loading="lazy">
+    </li>
+    <li class="svc" data-img="1616627547584-bf28cee262db">
+      <div class="rule" data-rule></div>
+      <div class="grid svc__row">
+        <span class="mono c1">06</span>
+        <p class="t svc__text">Работаем по&nbsp;вашему проекту или&nbsp;с&nbsp;архитектором-партнёром: уточняем узлы, считаем материалы.</p>
+        <h3 class="h-l svc__name">По проекту</h3>
+        <span class="mono svc__tag">Дизайн <i class="sq"></i></span>
+      </div>
+      <img class="svc__thumb" src="https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&w=900&q=70" alt="Кресло на полу из микроцемента" loading="lazy">
+      <div class="rule" data-rule></div>
+    </li>
+  </ul>
+  <div class="svc-float" id="svcFloat" aria-hidden="true"><img id="svcFloatImg" alt=""></div>
+</section>
+
+<!-- ============ 05. ПРОЕКТЫ ============ -->
+<div id="projects">
+  <section class="light sec sec--top">
+    <div class="grid shead">
+      <p class="label mono c1"><i class="sq"></i>Проекты</p>
+      <h2 class="h-xl shead__title" data-split>Спокойные интерьеры, где видно качество исполнения.</h2>
+      <p class="t shead__note">Демонстрационная подборка: так могли бы выглядеть завершённые объекты ЧЕРТЫ. Нажмите на&nbsp;проект, чтобы увидеть состав работ.</p>
+    </div>
+  </section>
+
+  <article class="proj light" data-project="0">
+    <figure class="media proj__wide" data-cursor="Открыть"><img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=2400&q=80" alt="Гостиная-столовая с дубовой стеной" loading="lazy"></figure>
+    <div class="grid proj__meta">
+      <p class="t c1">Новостройка</p>
+      <p class="t stair proj__desc"><span>Объединили кухню и&nbsp;гостиную, спрятали хранение</span><span>в&nbsp;стену из&nbsp;дубового шпона и&nbsp;сохранили максимум дневного света.</span></p>
+      <div class="proj__title"><h3 class="h-l" data-split>Дуб и&nbsp;свет</h3><p class="mono">86 м² <i class="sq"></i> 4,5 мес.</p></div>
+      <button class="mono proj__open">Состав<br>работ <i class="sq"></i></button>
+      <p class="t proj__loc">Объект 017,<br>Москва</p>
+    </div>
+  </article>
+
+  <article class="proj proj--pair dark" data-project="1">
+    <div class="grid proj__meta">
+      <p class="t c1">Вторичное жильё</p>
+      <p class="t stair proj__desc"><span>Капитальный ремонт с&nbsp;полной заменой инженерии.</span><span>Выровняли геометрию, сохранив высоту потолков, и&nbsp;перенесли кухню к&nbsp;окну.</span></p>
+      <div class="proj__title"><h3 class="h-l" data-split>Сталинка</h3><p class="mono">64 м² <i class="sq"></i> 5 мес.</p></div>
+      <button class="mono proj__open">Состав<br>работ <i class="sq"></i></button>
+      <p class="t proj__loc">Объект 021,<br>Москва</p>
+    </div>
+    <div class="grid proj__imgs">
+      <figure class="media proj__small" data-cursor="Открыть"><img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?auto=format&fit=crop&w=1000&q=80" alt="Санузел с деревянными рейками" loading="lazy"></figure>
+      <figure class="media proj__big" data-cursor="Открыть"><img src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?auto=format&fit=crop&w=1800&q=80" alt="Гостиная с кирпичной стеной и высокими потолками" loading="lazy"></figure>
+    </div>
+  </article>
+
+  <article class="proj proj--pair proj--rev light" data-project="2">
+    <div class="grid proj__imgs">
+      <figure class="media proj__big" data-cursor="Открыть"><img src="https://images.unsplash.com/photo-1616593969747-4797dc75033e?auto=format&fit=crop&w=1800&q=80" alt="Кресло у окна в светлой комнате" loading="lazy"></figure>
+      <figure class="media proj__small" data-cursor="Открыть"><img src="https://images.unsplash.com/photo-1595514535415-dae8580c416c?auto=format&fit=crop&w=1000&q=80" alt="Санузел с дубовой тумбой" loading="lazy"></figure>
+    </div>
+    <div class="grid proj__meta">
+      <p class="t c1">Новостройка</p>
+      <p class="t stair proj__desc"><span>Интерьер для семьи с&nbsp;ребёнком: шумоизоляция</span><span>детской и&nbsp;спальни, два санузла, много закрытого хранения.</span></p>
+      <div class="proj__title"><h3 class="h-l" data-split>У&nbsp;парка</h3><p class="mono">112 м² <i class="sq"></i> 6 мес.</p></div>
+      <button class="mono proj__open">Состав<br>работ <i class="sq"></i></button>
+      <p class="t proj__loc">Объект 009,<br>Московская обл.</p>
+    </div>
+  </article>
+
+  <article class="proj dark" data-project="3">
+    <figure class="media proj__wide" data-cursor="Открыть"><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=2400&q=80" alt="Светлая спальня с выходом на балкон" loading="lazy"></figure>
+    <div class="grid proj__meta">
+      <p class="t c1">Новостройка</p>
+      <p class="t stair proj__desc"><span>Небольшая площадь без ощущения тесноты:</span><span>светлые поверхности, скрытые системы хранения и&nbsp;ванна вместо душевой.</span></p>
+      <div class="proj__title"><h3 class="h-l" data-split>Для двоих</h3><p class="mono">48 м² <i class="sq"></i> 3,5 мес.</p></div>
+      <button class="mono proj__open">Состав<br>работ <i class="sq"></i></button>
+      <p class="t proj__loc">Объект 012,<br>Москва</p>
+    </div>
+  </article>
+</div>
+
+<!-- ============ 06. ПАСПОРТ РЕМОНТА ============ -->
+<section class="passport dark sec" id="passport">
+  <div class="grid shead">
+    <p class="label mono c1"><i class="sq"></i>Паспорт ремонта</p>
+    <h2 class="h-xl shead__title" data-split>Одна ссылка вместо сотни сообщений.</h2>
+    <p class="t stair shead__note"><span>Паспорт — единая страница объекта: смета, этапы, даты, фото, материалы, изменения и&nbsp;документы.</span><span>Открываете ссылку и&nbsp;видите актуальное состояние ремонта. Ниже — интерактивный макет того, как это может работать.</span></p>
+  </div>
+
+  <div class="pp-wrap">
+    <div class="pp" id="pp">
+      <div class="pp__bar mono">
+        <span class="pp__brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="15" width="21" height="2"/><rect x="25" y="13" width="6" height="6"/></svg>Паспорт</span>
+        <span class="pp__crumbs dim">Объекты / № 024</span>
+        <span class="pp__sync"><i></i>Обновлено сегодня, 18:40</span>
+      </div>
+
+      <div class="pp__head">
+        <div class="pp__id">
+          <p class="pp__obj h-l">Объект № 024</p>
+          <p class="t pp__sub">Квартира · 74 м²</p>
+          <span class="pp__demo mono">Демонстрационный проект</span>
+        </div>
+        <div class="pp__progress">
+          <div class="pp__pct h-xl"><span id="ppPct">0</span><small>%</small></div>
+          <div class="pp__pbar" aria-hidden="true">
+            <span class="done" style="--w:14"></span><span class="done" style="--w:18"></span><span class="done" style="--w:16"></span><span class="now" style="--w:24"></span><span style="--w:10"></span><span style="--w:8"></span><span style="--w:6"></span><span style="--w:4"></span>
+          </div>
+          <p class="mono dim">Общий прогресс <i class="sq"></i> план завершения 19 декабря</p>
+        </div>
+      </div>
+
+      <div class="pp__tabs mono" role="tablist" aria-label="Разделы паспорта">
+        <button role="tab" aria-selected="true" aria-controls="tab-overview" id="t-overview" data-tab="overview">Обзор</button>
+        <button role="tab" aria-selected="false" aria-controls="tab-stages" id="t-stages" data-tab="stages" tabindex="-1">Этапы <i>8</i></button>
+        <button role="tab" aria-selected="false" aria-controls="tab-materials" id="t-materials" data-tab="materials" tabindex="-1">Материалы <i>9</i></button>
+        <button role="tab" aria-selected="false" aria-controls="tab-photos" id="t-photos" data-tab="photos" tabindex="-1">Фотоотчёт <i>10</i></button>
+      </div>
+
+      <!-- ОБЗОР -->
+      <div class="pp__panel is-active" role="tabpanel" id="tab-overview" aria-labelledby="t-overview">
+        <div class="ov">
+          <div class="ov__main">
+            <div class="ov__now">
+              <div class="ov__now-head mono">
+                <span class="status status--work">В работе</span>
+                <span class="dim">Этап 04 из 08 · 11 окт — 07 ноя</span>
+              </div>
+              <h4 class="h-m">Подготовка стен</h4>
+              <ul class="ov__tasks">
+                <li class="ok">Грунтование основания</li>
+                <li class="ok">Установка маяков, проверка плоскости</li>
+                <li class="work">Штукатурка по маякам — <span class="mono dim">кухня, гостиная</span></li>
+                <li>Шпаклёвка под покраску</li>
+                <li>Промежуточная приёмка стен</li>
+              </ul>
+              <div class="ov__next">
+                <span class="mono dim">Следующий этап</span>
+                <strong class="h-s">Чистовая отделка стен и&nbsp;потолков</strong>
+                <span class="mono">План: с&nbsp;9&nbsp;ноября</span>
+              </div>
+            </div>
+
+            <div class="ov__timeline" aria-label="Этапы проекта">
+              <div class="tl ok"><i></i><span>Демонтаж</span></div>
+              <div class="tl ok"><i></i><span>Электромонтаж</span></div>
+              <div class="tl ok"><i></i><span>Черновая сантехника</span></div>
+              <div class="tl now"><i></i><span>Подготовка стен</span></div>
+              <div class="tl"><i></i><span>Чистовая отделка</span></div>
+              <div class="tl"><i></i><span>Полы</span></div>
+              <div class="tl"><i></i><span>Чистовой монтаж</span></div>
+              <div class="tl"><i></i><span>Приёмка</span></div>
+            </div>
+
+            <div class="ov__photos">
+              <div class="ov__photos-head mono"><span class="dim">Последние фото</span><button class="link" data-goto="photos">Весь фотоотчёт →</button></div>
+              <div class="ov__thumbs">
+                <button class="thumb" data-lb="5"><img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=70" alt="Грунтование стены валиком" loading="lazy"><span class="mono">24 окт</span></button>
+                <button class="thumb" data-lb="4"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=70" alt="Подготовка деревянных элементов" loading="lazy"><span class="mono">22 окт</span></button>
+                <button class="thumb" data-lb="3"><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=600&q=70" alt="Разводка труб черновой сантехники" loading="lazy"><span class="mono">10 окт</span></button>
+              </div>
+            </div>
+          </div>
+
+          <aside class="ov__side">
+            <div class="ov__block">
+              <p class="mono dim">Финансы</p>
+              <dl class="money">
+                <div><dt>Смета согласована</dt><dd class="mono">2 480 000 ₽</dd></div>
+                <div><dt>Выполнено работ</dt><dd class="mono">1 537 600 ₽</dd></div>
+                <div><dt>Оплачено</dt><dd class="mono">1 488 000 ₽</dd></div>
+                <div class="money__add"><dt>Доп. работы, согласовано</dt><dd class="mono">+ 46 000 ₽</dd></div>
+              </dl>
+              <div class="money__bar" aria-hidden="true"><span style="width:60%"></span><span style="width:2%"></span></div>
+              <p class="mono dim small">Смета не меняется без вашего согласования</p>
+            </div>
+            <div class="ov__block">
+              <p class="mono dim">Последние изменения</p>
+              <ul class="feed">
+                <li><span class="status status--ok mono">Согласовано</span><p>Перенос розетки на&nbsp;кухне под&nbsp;новый гарнитур</p><span class="mono dim">23 окт · + 3 500 ₽</span></li>
+                <li><span class="status status--ok mono">Устранено</span><p>Замечание: скол на&nbsp;откосе окна в&nbsp;спальне</p><span class="mono dim">20 окт · 0 ₽</span></li>
+                <li><span class="status status--wait mono">Ждёт решения</span><p>Замена плитки в&nbsp;санузле на&nbsp;аналог с&nbsp;короткой поставкой</p><span class="mono dim">25 окт · 0 ₽</span></li>
+              </ul>
+            </div>
+            <div class="ov__block">
+              <p class="mono dim">Документы</p>
+              <ul class="docs">
+                <li><span>Смета по&nbsp;позициям</span><span class="mono dim">PDF</span></li>
+                <li><span>График этапов</span><span class="mono dim">PDF</span></li>
+                <li><span>Акт скрытых работ — электрика</span><span class="mono dim">PDF</span></li>
+                <li><span>Акт скрытых работ — сантехника</span><span class="mono dim">PDF</span></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <div class="pp__panel" role="tabpanel" id="tab-stages" aria-labelledby="t-stages" hidden>
+        <ol class="stages" id="stagesList"></ol>
+      </div>
+
+      <div class="pp__panel" role="tabpanel" id="tab-materials" aria-labelledby="t-materials" hidden>
+        <div class="chips mono" id="matFilters">
+          <button class="chip is-on" data-f="all">Все</button>
+          <button class="chip" data-f="site">На объекте</button>
+          <button class="chip" data-f="order">Заказано</button>
+          <button class="chip" data-f="agreed">Согласовано</button>
+        </div>
+        <div class="mat" id="matList" role="table" aria-label="Материалы объекта"></div>
+      </div>
+
+      <div class="pp__panel" role="tabpanel" id="tab-photos" aria-labelledby="t-photos" hidden>
+        <div class="chips mono" id="photoFilters"></div>
+        <div class="gal" id="gal"></div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="grid pp-points">
+    <li><span class="mono">01 <i class="sq"></i></span><p class="t">Актуальный статус каждого этапа и&nbsp;плановые даты</p></li>
+    <li><span class="mono">02 <i class="sq"></i></span><p class="t">Фото скрытых работ до&nbsp;того, как их&nbsp;закроет отделка</p></li>
+    <li><span class="mono">03 <i class="sq"></i></span><p class="t">Все изменения — с&nbsp;ценой и&nbsp;вашим согласованием</p></li>
+    <li><span class="mono">04 <i class="sq"></i></span><p class="t">Замечания и&nbsp;статус их&nbsp;устранения</p></li>
+  </ul>
+  <p class="grid pp-note"><span class="mono dim">Демонстрационный макет. Данные и&nbsp;фотографии приведены для иллюстрации концепции.</span></p>
+</section>
+
+<!-- лайтбокс -->
+<div class="lb" id="lb" hidden>
+  <button class="lb__close mono" aria-label="Закрыть">Закрыть <i class="sq"></i></button>
+  <button class="lb__nav lb__nav--prev mono" aria-label="Предыдущее фото">←</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap" class="mono"></figcaption></figure>
+  <button class="lb__nav lb__nav--next mono" aria-label="Следующее фото">→</button>
+</div>
+
+<!-- ============ 07. ПРОЦЕСС ============ -->
+<section class="process light" id="process">
+  <div class="process__pin" id="processPin">
+    <div class="grid process__head">
+      <p class="label mono c1"><i class="sq"></i>Процесс</p>
+      <h2 class="h-xl process__title" data-split>Семь шагов от&nbsp;встречи до&nbsp;ключей.</h2>
+      <p class="mono process__count"><span id="procNow">01</span> / 07</p>
+    </div>
+    <div class="process__viewport">
+      <ol class="process__track" id="processTrack">
+        <li class="step"><span class="step__n">01</span><h3 class="h-m">Встреча и&nbsp;замер</h3><p class="t">Приезжаем на&nbsp;объект, обсуждаем задачи и&nbsp;бюджет, делаем обмеры и&nbsp;фотофиксацию исходного состояния.</p><p class="mono step__out">Вы получаете <i class="sq"></i> обмерный план</p></li>
+        <li class="step"><span class="step__n">02</span><h3 class="h-m">Смета и&nbsp;состав работ</h3><p class="t">Разбираем каждую позицию: что делаем, из&nbsp;каких материалов, в&nbsp;каком объёме. Без строк «прочие работы».</p><p class="mono step__out">Вы получаете <i class="sq"></i> смету по позициям</p></li>
+        <li class="step"><span class="step__n">03</span><h3 class="h-m">Договор и&nbsp;график</h3><p class="t">Фиксируем стоимость, этапы и&nbsp;даты. Оплата — поэтапно, по&nbsp;факту выполненных и&nbsp;принятых работ.</p><p class="mono step__out">Вы получаете <i class="sq"></i> договор и график</p></li>
+        <li class="step"><span class="step__n">04</span><h3 class="h-m">Черновые работы</h3><p class="t">Демонтаж, перегородки, электрика, сантехника, стяжки. Скрытые работы снимаем на&nbsp;фото и&nbsp;оформляем актами.</p><p class="mono step__out">Вы получаете <i class="sq"></i> доступ к паспорту</p></li>
+        <li class="step"><span class="step__n">05</span><h3 class="h-m">Чистовая отделка</h3><p class="t">Выравнивание, покраска, плитка, полы, двери. Материалы согласуются заранее и&nbsp;отмечаются в&nbsp;паспорте.</p><p class="mono step__out">Вы получаете <i class="sq"></i> промежуточные приёмки</p></li>
+        <li class="step"><span class="step__n">06</span><h3 class="h-m">Финальная приёмка</h3><p class="t">Проходим объект вместе по&nbsp;согласованному перечню. Замечания закрываются до&nbsp;подписания акта.</p><p class="mono step__out">Вы получаете <i class="sq"></i> акт и перечень работ</p></li>
+        <li class="step"><span class="step__n">07</span><h3 class="h-m">Передача объекта</h3><p class="t">Клининг, ключи, исполнительные схемы проводки и&nbsp;трубопроводов. Паспорт остаётся у&nbsp;вас как архив ремонта.</p><p class="mono step__out">Вы получаете <i class="sq"></i> комплект документов</p></li>
+      </ol>
+    </div>
+    <div class="process__bar"><span id="processBar"></span></div>
+  </div>
+</section>
+
+<!-- ============ 08. КАЧЕСТВО ============ -->
+<section class="quality dark sec" id="quality">
+  <div class="grid shead">
+    <p class="label mono c1"><i class="sq"></i>Качество</p>
+    <h2 class="h-xl shead__title" data-split>Качество видно в&nbsp;швах, примыканиях и&nbsp;углах.</h2>
+  </div>
+
+  <div class="grid q">
+    <figure class="q__hero media">
+      <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1800&q=80" alt="Крупный план белой плитки со смесителем" loading="lazy">
+      <button class="pin" style="--x:30%;--y:34%" aria-describedby="pin1"><span></span></button>
+      <span class="pin__tip" id="pin1" role="tooltip" style="--x:30%;--y:34%"><b class="mono">Шов</b>Одинаковая ширина и&nbsp;заполнение по&nbsp;всей плоскости</span>
+      <button class="pin" style="--x:80%;--y:60%" aria-describedby="pin2"><span></span></button>
+      <span class="pin__tip pin__tip--left" id="pin2" role="tooltip" style="--x:80%;--y:60%"><b class="mono">Вывод</b>Смеситель по&nbsp;оси раскладки, без подрезки «на&nbsp;глаз»</span>
+      <button class="pin" style="--x:34%;--y:92%" aria-describedby="pin3"><span></span></button>
+      <span class="pin__tip pin__tip--up" id="pin3" role="tooltip" style="--x:34%;--y:92%"><b class="mono">Примыкание</b>Герметичный стык столешницы и&nbsp;стены</span>
+    </figure>
+
+    <div class="q__check">
+      <p class="mono dim">Фрагмент листа приёмки</p>
+      <p class="t stair q__lead"><span>Именно в&nbsp;деталях ремонт выдаёт спешку.</span><span>Поэтому проверяем их&nbsp;по&nbsp;чек-листу на&nbsp;каждом этапе, а&nbsp;не&nbsp;только в&nbsp;финале. Попробуйте:</span></p>
+      <ul class="check" id="check">
+        <li><label><input type="checkbox"><span>Плоскость стен — правилом 2&nbsp;м</span></label></li>
+        <li><label><input type="checkbox"><span>Вертикаль углов и&nbsp;откосов</span></label></li>
+        <li><label><input type="checkbox"><span>Ширина и&nbsp;заполнение швов плитки</span></label></li>
+        <li><label><input type="checkbox"><span>Работа каждой розетки и&nbsp;выключателя</span></label></li>
+        <li><label><input type="checkbox"><span>Герметичность сантехнических узлов</span></label></li>
+        <li><label><input type="checkbox"><span>Открывание дверей и&nbsp;фасадов без&nbsp;трения</span></label></li>
+      </ul>
+      <div class="check__foot mono"><span class="check__bar"><span id="checkBar"></span></span><span id="checkCount">0 / 6</span></div>
+      <p class="check__done mono" id="checkDone">Этап можно принимать <i class="sq"></i></p>
+    </div>
+  </div>
+
+  <div class="grid q__tiles">
+    <figure class="q__tile media"><img src="https://images.unsplash.com/photo-1585128792020-803d29415281?auto=format&fit=crop&w=900&q=80" alt="Деревянный комод на паркете" loading="lazy"><figcaption class="mono">01 <i class="sq"></i> Геометрия укладки</figcaption></figure>
+    <figure class="q__tile media"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Тёмный санузел с ванной" loading="lazy"><figcaption class="mono">02 <i class="sq"></i> Скрытые узлы</figcaption></figure>
+    <figure class="q__tile media"><img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80" alt="Светлый минималистичный интерьер" loading="lazy"><figcaption class="mono">03 <i class="sq"></i> Чистовая сдача</figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ 09. ВОПРОСЫ ============ -->
+<section class="faq light sec" id="faq">
+  <div class="grid shead">
+    <p class="label mono c1"><i class="sq"></i>Вопросы</p>
+    <h2 class="h-xl shead__title" data-split>То, о&nbsp;чём спрашивают до&nbsp;начала.</h2>
+  </div>
+  <div class="acc">
+    <div class="acc__item">
+      <div class="rule" data-rule></div>
+      <button class="acc__q grid" aria-expanded="false"><span class="mono c1">01</span><span class="h-s acc__text">Может ли смета вырасти в&nbsp;процессе?</span><i class="acc__pm"></i></button>
+      <div class="acc__a"><div><p class="t grid"><span class="acc__ans">Только если вы&nbsp;сами решите что-то изменить или&nbsp;при вскрытии обнаружится то, чего не&nbsp;было видно при осмотре. В&nbsp;обоих случаях мы&nbsp;сначала показываем причину и&nbsp;стоимость, и&nbsp;работы начинаются после вашего согласования. Каждое изменение остаётся в&nbsp;паспорте.</span></p></div></div>
+    </div>
+    <div class="acc__item">
+      <div class="rule" data-rule></div>
+      <button class="acc__q grid" aria-expanded="false"><span class="mono c1">02</span><span class="h-s acc__text">Нужно ли мне приезжать на&nbsp;объект?</span><i class="acc__pm"></i></button>
+      <div class="acc__a"><div><p class="t grid"><span class="acc__ans">Не&nbsp;обязательно. Ход работ виден в&nbsp;паспорте: фото, статусы, даты. Приезжать имеет смысл на&nbsp;приёмки ключевых этапов и&nbsp;финальную — но&nbsp;их&nbsp;можно провести и&nbsp;по&nbsp;видеосвязи.</span></p></div></div>
+    </div>
+    <div class="acc__item">
+      <div class="rule" data-rule></div>
+      <button class="acc__q grid" aria-expanded="false"><span class="mono c1">03</span><span class="h-s acc__text">Кто закупает материалы?</span><i class="acc__pm"></i></button>
+      <div class="acc__a"><div><p class="t grid"><span class="acc__ans">Как удобнее вам. Черновые материалы обычно берём на&nbsp;себя. Чистовые закупим по&nbsp;согласованной спецификации или&nbsp;примем ваши — в&nbsp;паспорте видно, что заказано, что доставлено и&nbsp;что уже на&nbsp;объекте.</span></p></div></div>
+    </div>
+    <div class="acc__item">
+      <div class="rule" data-rule></div>
+      <button class="acc__q grid" aria-expanded="false"><span class="mono c1">04</span><span class="h-s acc__text">Нет дизайн-проекта. Это проблема?</span><i class="acc__pm"></i></button>
+      <div class="acc__a"><div><p class="t grid"><span class="acc__ans">Нет. Для спокойного ремонта достаточно планировки, схем электрики и&nbsp;сантехники и&nbsp;списка материалов. Поможем собрать этот минимум или&nbsp;познакомим с&nbsp;архитектором.</span></p></div></div>
+    </div>
+    <div class="acc__item">
+      <div class="rule" data-rule></div>
+      <button class="acc__q grid" aria-expanded="false"><span class="mono c1">05</span><span class="h-s acc__text">Как вы&nbsp;работаете с&nbsp;замечаниями?</span><i class="acc__pm"></i></button>
+      <div class="acc__a"><div><p class="t grid"><span class="acc__ans">Каждое замечание заносится в&nbsp;паспорт с&nbsp;фото, ответственным и&nbsp;сроком. Статус «устранено» ставится только после повторной проверки. Финальный акт подписывается, когда открытых замечаний не&nbsp;осталось.</span></p></div></div>
+    </div>
+    <div class="acc__item">
+      <div class="rule" data-rule></div>
+      <button class="acc__q grid" aria-expanded="false"><span class="mono c1">06</span><span class="h-s acc__text">Как происходит оплата?</span><i class="acc__pm"></i></button>
+      <div class="acc__a"><div><p class="t grid"><span class="acc__ans">Поэтапно, по&nbsp;графику из&nbsp;договора. Вы&nbsp;платите за&nbsp;принятый этап, а&nbsp;не&nbsp;авансом за&nbsp;весь ремонт. Баланс выполненных работ и&nbsp;оплат всегда виден в&nbsp;паспорте.</span></p></div></div>
+      <div class="rule" data-rule></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. КОНТАКТЫ ============ -->
+<section class="final dark" id="contacts">
+  <div class="final__hero">
+    <figure class="final__img"><img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=2400&q=80" alt="Светлая комната с деревянным полом и мягким дневным светом" loading="lazy"></figure>
+    <div class="final__shade"></div>
+    <h2 class="final__title h-xxl" data-split>Проведём черту.</h2>
+    <p class="final__sub mono">Между планом и&nbsp;готовой квартирой <i class="sq"></i></p>
+  </div>
+
+  <div class="grid final__grid sec">
+    <p class="label mono c1"><i class="sq"></i>Контакты</p>
+    <div class="final__info">
+      <p class="t stair"><span>Расскажите об&nbsp;объекте — перезвоним,</span><span>ответим на&nbsp;вопросы и&nbsp;договоримся о&nbsp;замере. Это ни&nbsp;к&nbsp;чему не&nbsp;обязывает.</span></p>
+      <dl class="final__contacts">
+        <div><dt class="mono dim">Телефон</dt><dd class="t"><a href="tel:+79000000000">+7 900 000-00-00</a></dd></div>
+        <div><dt class="mono dim">Почта</dt><dd class="t"><a href="mailto:hello@cherta.example">hello@cherta.example</a></dd></div>
+        <div><dt class="mono dim">Часы</dt><dd class="t">Ежедневно, 9:00–21:00</dd></div>
+      </dl>
+    </div>
+
+    <form class="form" id="form" novalidate>
+      <fieldset class="form__group">
+        <legend class="mono dim">Тип объекта</legend>
+        <div class="opts">
+          <label><input type="radio" name="type" value="Новостройка" checked><span>Новостройка</span></label>
+          <label><input type="radio" name="type" value="Вторичное жильё"><span>Вторичное жильё</span></label>
+        </div>
+      </fieldset>
+
+      <div class="form__group">
+        <label class="mono dim form__label" for="area">Площадь <output class="h-s" id="areaOut" for="area">60 м²</output></label>
+        <input class="range" type="range" id="area" name="area" min="20" max="200" step="2" value="60">
+      </div>
+
+      <fieldset class="form__group">
+        <legend class="mono dim">Когда планируете начать</legend>
+        <div class="opts">
+          <label><input type="radio" name="when" value="Ключи уже есть" checked><span>Ключи уже есть</span></label>
+          <label><input type="radio" name="when" value="В течение 3 месяцев"><span>В течение 3 мес.</span></label>
+          <label><input type="radio" name="when" value="Присматриваюсь"><span>Присматриваюсь</span></label>
+        </div>
+      </fieldset>
+
+      <div class="form__row">
+        <div class="field"><input id="name" name="name" type="text" autocomplete="name" placeholder=" " required><label for="name" class="mono">Имя</label><span class="field__err mono">Как к вам обращаться?</span></div>
+        <div class="field"><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder=" " required><label for="phone" class="mono">Телефон</label><span class="field__err mono">Проверьте номер</span></div>
+      </div>
+      <div class="field"><textarea id="msg" name="msg" rows="1" placeholder=" "></textarea><label for="msg" class="mono">Комментарий — необязательно</label></div>
+
+      <label class="consent t"><input type="checkbox" id="consent" required><span>Согласен на&nbsp;обработку персональных данных</span></label>
+
+      <button class="btn btn--wide mono" type="submit" data-magnetic>Отправить заявку <i class="sq"></i></button>
+      <p class="mono dim form__note">Демонстрационная форма — данные никуда не&nbsp;отправляются</p>
+
+      <div class="form__ok" id="formOk" hidden>
+        <span class="form__tick" aria-hidden="true"></span>
+        <h3 class="h-l">Заявка принята.</h3>
+        <p class="t" id="formOkText">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение рабочего дня.</p>
+        <button class="link mono" type="button" id="formReset">Отправить ещё одну</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ ФУТЕР ============ -->
+<footer class="footer dark">
+  <div class="rule" data-rule></div>
+  <div class="grid footer__top">
+    <p class="t c1">ЧЕРТА.<br>Ремонт и&nbsp;отделка квартир</p>
+    <div class="footer__col">
+      <a class="t" href="tel:+79000000000">+7 900 000-00-00</a>
+      <a class="t" href="mailto:hello@cherta.example">hello@cherta.example</a>
+    </div>
+    <nav class="footer__nav mono" aria-label="Навигация в подвале">
+      <a href="#approach">Подход</a><a href="#services">Услуги</a><a href="#projects">Проекты</a><a href="#passport">Паспорт</a><a href="#process">Процесс</a><a href="#contacts">Контакты</a>
+    </nav>
+    <div class="footer__col mono footer__soc"><span class="dim">Соцсети</span><span>Telegram</span><span>WhatsApp</span><span>VK</span></div>
+    <a class="footer__up mono" href="#top">Наверх <i class="sq"></i></a>
+  </div>
+  <p class="footer__word" id="footerWord" aria-hidden="true"><span>Ч</span><span>Е</span><span>Р</span><span>Т</span><span>А</span><span>.</span></p>
+  <div class="grid footer__bottom mono dim">
+    <span class="c1">© 2026 ЧЕРТА.</span>
+    <span class="footer__concept">Концепт-проект. Компания, объекты и&nbsp;данные — вымышленные.</span>
+    <button class="footer__privacy link mono" type="button" id="policyOpen">Политика конфиденциальности</button>
+  </div>
+</footer>
+
+<!-- политика конфиденциальности -->
+<div class="policy" id="policy" hidden>
+  <div class="policy__box light" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
+    <button class="modal__close mono" data-policy-close>Закрыть <i class="sq"></i></button>
+    <p class="label mono"><i class="sq"></i>Документ</p>
+    <h3 class="h-l" id="policyTitle">Политика конфиденциальности</h3>
+    <div class="policy__text t">
+      <p>Мы&nbsp;используем имя и&nbsp;телефон из&nbsp;заявки только для того, чтобы связаться с&nbsp;вами и&nbsp;договориться о&nbsp;замере. Данные не&nbsp;передаются третьим лицам и&nbsp;не&nbsp;используются для рассылок.</p>
+      <p>Фотографии и&nbsp;документы объекта в&nbsp;паспорте ремонта доступны только по&nbsp;вашей персональной ссылке. По&nbsp;запросу мы&nbsp;удаляем их&nbsp;после завершения проекта.</p>
+      <p>Чтобы отозвать согласие или&nbsp;удалить данные, напишите на&nbsp;hello@cherta.example.</p>
+      <p class="mono dim">Концепт-проект: компания вымышленная, форма на&nbsp;сайте данные не&nbsp;отправляет.</p>
+    </div>
+  </div>
+</div>
+
+<!-- всплывающее уведомление -->
+<div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+<!-- модальное окно проекта -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="modal__close mono" data-close>Закрыть <i class="sq"></i></button>
+    <figure class="modal__img"><img id="mImg" alt=""></figure>
+    <div class="modal__body">
+      <p class="mono dim" id="mNum"></p>
+      <h3 class="h-xl" id="mTitle"></h3>
+      <p class="t" id="mText"></p>
+      <dl class="modal__facts" id="mFacts"></dl>
+      <p class="mono dim">Демонстрационный проект</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js?v=10"></script>
+</body>
+</html>
