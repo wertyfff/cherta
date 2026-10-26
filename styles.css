@@ -777,7 +777,7 @@ body.no-motion .loader { display: none; }
 
   .form__row { grid-template-columns: 1fr; gap: 6px; }
   .final__hero { height: 88svh; }
-  .final__title { font-size: 22vw; }
+  .final__title { font-size: 19vw; }
   .footer__top { row-gap: 24px; }
   .footer__up, .footer__privacy { justify-self: start !important; text-align: left; }
 
